@@ -37,10 +37,9 @@ if (canvas.getContext) {
   ctx.stroke()
   const rectangle = new Path2D()
   rectangle.rect(110, 110, 150, 150)
-  const circle = new Path2D()
-  circle.moveTo(225, 135)
   ctx.stroke(rectangle)
-  ctx.fill(circle)
+  const svgInstance = new Path2D("M10 210 h 80 v 80 h -80 Z")
+  ctx.stroke(svgInstance)
 } else {
   console.log('Canvas is not supported in this browser')
 }
